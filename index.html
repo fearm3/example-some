@@ -5,11 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJs Start</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="app">
+      <h1>{{title}}</h1>
+      <p>{{content}}</p>
+      <br /><br />
+      <a
+        :target="eduflow.target"
+        :href="eduflow.url"
+        v-bind:alt="eduflow.alt"
+        v-bind:fromApp="owner"
+        >{{eduflow.title}}</a
+      >
+      <br /><br />
 
-
-
-    
+      <button v-on:click="changeTitle('Button-1')">Change title</button>
+      <button v-on:click="changeTitle('Button-2')">Change title-2</button>
+      <div
+        class="box"
+        @click="changeTitle('Box')"
+        @mousemove="updateCoords('mouseOverEvents',$event)"
+      ></div>
+      <span>{{coords.x}},{{coords.y}}</span>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
