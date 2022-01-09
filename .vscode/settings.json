@@ -9,6 +9,7 @@
     "*1-starts": true,
     "*1-starts.*": true,
     "*2-events": true,
-    "*3-counter-app.*": true
+    "*3-counter-app.*": true,
+    "3-counter-app": true
   }
 }
