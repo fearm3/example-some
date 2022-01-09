@@ -4,7 +4,6 @@
     "*.git.*": true,
     "*.vscode": true,
     "*.vscode.*": true,
-    "*1-starter": true,
     "*1-starter.*": true,
     "*2-events.*": true
   }

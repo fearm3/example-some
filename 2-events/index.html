@@ -15,7 +15,20 @@
     />
   </head>
   <body>
-  
+    <div id="app">
+      <div class="row mt-5">
+        <div class="col-4 offset-4">
+          <h3 class="text-center">Event</h3>
+          <input @input="updateValue" class="form-control m-2" v-bind:value="fullname" >
+          <input v-model="fullname" class="form-control m-2"  >
+          {{fullname}} <br><br>
+            <button   class="btn btn-danger btn-sm">Ekle</button>
+
+          </input>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
