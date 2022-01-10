@@ -11,6 +11,8 @@
     "*2-events": true,
     "*3-counter-app.*": true,
     "3-counter-app": true,
-    "4-reactivity": true
+    "4-reactivity": true,
+    "5-life-cycle-hooks": true,
+    "6-class-style-binding": true
   }
 }
