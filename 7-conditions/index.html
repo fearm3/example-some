@@ -15,7 +15,39 @@
     />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2 p-2">
+            <button
+              class="btn btn-sm btn-primary"
+              @click="showContainer =!showContainer"
+            >
+              Open / Close
+            </button>
+            <h1 v-if="showContainer" class="text-danger">See initial</h1>
+            <h1 v-if="!showContainer" class="text-warning">See second</h1>
+            <hr />
+            <h2 :class="counterBoxClass">{{counter}}</h2>
+            <button class="btn btn-sm btn-success" @click="counter++">
+              increase
+            </button>
+            <button class="btn btn-sm btn-danger" @click="counter--">
+              decrease
+            </button>
+            <!-- DOM -->
+            <p v-if="counter < 0">Counter is negative</p>
+            <p v-else-if="counter>0">Counter is positive</p>
+            <p v-else>Counter is 0</p>
+            <hr />
+            <!-- CSS -->
+            <p v-show="counter < 0">Counter is negative</p>
+            <p v-show="counter>0">Counter is positive</p>
+            <p v-show="counter===0">Counter is 0</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
